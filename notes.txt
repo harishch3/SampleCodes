@@ -1,0 +1,2 @@
+1) How to return more than one value from a function??
+using pointers and call by reference concept
