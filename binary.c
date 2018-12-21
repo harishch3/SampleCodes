@@ -17,7 +17,7 @@ void showBits(int n)
 }
 int main()
 {
-	int a = 10;
+	char a = 0x20;
 	showBits(a);
 	printf("\n");
 	return 0;

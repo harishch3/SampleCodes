@@ -1,0 +1,6 @@
+Signals & Slots:
+
+Def:
+Signal and Slots are used to achieve communication between object.It is central feature of QT. In GUI programming it replaces the regular callback programming which achieved using function pointers.
+
+Signal are emitted when particular event occurs and respective slot is triggered which performs the action.
