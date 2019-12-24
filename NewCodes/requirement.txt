@@ -1,0 +1,87 @@
+The attached file (feed_sample.txt) contains a sample of data feed messages. Each message is made up of a varying number of token/value pairs of the form <token>=<value>. Each pair in a given message is separated by pipe ('|') characters (ascii 124). Each message is terminated with an ETX (ascii 3) character. A token is always a numeric value.
+
+For each set of messages for a given token 3 value we would like to know the different number of unique token combinations, and the top three combinations. Tokens occurring in a different order count as different combinations (ie the signature [ 3,4,10,19,56 ] is different from [ 3,4,19,10,56 ]).
+
+Eg: given the data file
+
+3=200|4=99|5=SOME|56=956|987=123.4567
+
+3=200|4=99|5=SOME|56=956|987=123.4568
+
+3=200|4=99|5=SOME|6=12.50|12=99|506=163533
+
+3=200|4=99|5=SOME|6=12.50|12=99|506=163533
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|6=12.50|12=99|506=163533
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|6=12.50|12=99|506=163533
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|6=12.50|12=99|506=163533
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|6=12.50|12=99|506=163533
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|7=9.95|8=400|9=12.50
+
+3=200|4=99|5=SOME|6=12.50|12=99|506=163533
+
+3=75|4=1024|5=REALLYLONG|95=2348743238|4098=8234763148324|10241=1
+
+3=75|86=YABBA|87=DABBA|88=DOO
+
+3=200|99=4|128=5.9543534
+
+3=75|86=BIBBETY|87=BOBBITY|88=BOO
+
+ 
+
+We would expect to see an output something like:
+
+3=200: unique signatures - 4
+
+Top 3:
+
+ 
+
+[3,4,5,7,8,9]10
+
+ 
+
+[3,4,5,6,12,506]7
+
+ 
+
+[3,4,5,56,987]2
+
+ 
+
+3=75: unique signatures - 2
+
+Top 3:
+
+ 
+
+[3,86,87,88]2
+
+ 
+
+[3,4,5,95,4098,10204]1
+
+N/A 0

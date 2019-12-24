@@ -1,0 +1,6 @@
+total 1M
+-rwxr-xr-x 1 root   root   1M Nov 29 06:27 a.out
+-rw-rw-r-- 1 harish harish 1M Nov 29 06:27 fork.c
+-rw-rw-r-- 1 harish harish 1M Nov 28 06:45 SizeOf.cpp
+-rw-rw-r-- 1 harish harish 1M Nov 23 22:50 test.cpp
+-rw-r--r-- 1 root   root   0M Nov 29 06:37 test.txt
